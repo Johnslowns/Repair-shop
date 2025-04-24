@@ -12,7 +12,7 @@ const Map = () => {
             <p>Interactive map would be displayed here</p>
           </div>
           <div className="map-overlay">
-            <h3>Serving the Greater Metro Area</h3>
+            <h3>Serving the Greater Nyeri Area</h3>
             <p>We provide appliance repair services to all neighborhoods within a 50-mile radius.</p>
             <button className="map-cta">Check Our Coverage</button>
           </div>

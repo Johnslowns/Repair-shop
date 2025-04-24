@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-about">
-            <h3>FixIt Appliance Repairs</h3>
-            <p>Your trusted local appliance repair service with over 15 years of experience serving the community.</p>
+            <h3>Dex Appliance Repairs</h3>
+            <p>Your trusted local appliance repair service with over 6 years of experience serving the community.</p>
             <div className="social-links">
               <a href="#" aria-label="Facebook">FB</a>
               <a href="#" aria-label="Twitter">TW</a>
@@ -44,13 +44,13 @@ const Footer = () => {
             <address>
               <p>123 Repair Street<br />Your City, ST 12345</p>
               <p>Phone: (555) 123-4567</p>
-              <p>Email: info@fixitrepairs.com</p>
+              <p>Email: dexrepairs@gmail.com</p>
             </address>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} FixIt Appliance Repairs. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dex Appliance Repairs. All rights reserved.</p>
           <div className="legal-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

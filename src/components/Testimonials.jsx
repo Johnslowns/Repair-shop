@@ -10,7 +10,7 @@ const Testimonials = () => {
       rating: "★★★★★"
     },
     {
-      quote: "After being quoted 28000 for a new washing machine, these guys fixed it for $120. Saved me so much money!",
+      quote: "After being quoted 28000 for a new washing machine, these guys fixed it for 2500. Saved me so much money!",
       author: "Michael T.",
       rating: "★★★★★"
     },

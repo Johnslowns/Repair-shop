@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,9 +10,11 @@ const Navbar = () => {
           <h1><img src="./images/logo_image.PNG" alt="" /></h1>
         </div>
         <div className="navbar-links">
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
+          <Link to='/'>Home</Link>
+          <Link to='/services'>Services</Link>
+          <Link to='/aboutUs'>About us</Link>
+          <Link to='/contactUs'>Contact us</Link>
+          
         </div>
         <div className="navbar-cta">
           <button className="cta-button">Book a Repair</button>
