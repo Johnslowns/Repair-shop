@@ -37,7 +37,7 @@ const Services = () => {
         description: 'We fix heating elements, control boards, and door seals to ensure safe and efficient cooking.',
         repairs: ['Magnetron replacements', 'Thermostat calibration', 'Door latch fixes'],
         image: 'microwave-repair.jpg',
-        servicePage:'/microwaves'
+        servicePage:'/microwaves&ovens'
         },
         {
         id: 5,
@@ -45,7 +45,7 @@ const Services = () => {
         description: 'Whether gas or electric, we repair faulty burners, ignition issues, and temperature control problems.',
         repairs: ['Burner replacements', 'Ignition system fixes', 'Wiring and switch repairs'],
         image: 'cooker-repair.jpg',
-        servicePage:'/cookers'
+        servicePage:'/cookers&stoves'
         },
         {
         id: 6,
