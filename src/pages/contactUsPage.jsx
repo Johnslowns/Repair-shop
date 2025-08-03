@@ -93,7 +93,7 @@ const ContactUs = () => {
           <div className="contact-info">
             <div className="info-item">
               <h3>📞 Phone</h3>
-              <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+              <p><a href="tel:+254743905708">0743905708</a></p>
             </div>
 
             <div className="info-item">
@@ -115,12 +115,7 @@ const ContactUs = () => {
           </div>
 
           {/* Map Placeholder */}
-          <div className="map-placeholder">
-            <h3>Service Area</h3>
-            <div className="map-frame">
-              <p>📍 Map would go here (Google Maps, etc.)</p>
-            </div>
-          </div>
+          
         </section>
       </div>
 

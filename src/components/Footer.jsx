@@ -43,8 +43,8 @@ const Footer = () => {
           <div className="footer-contact">
             <h4>Contact Us</h4>
             <address>
-              <p>123 Repair Street<br />Your City, ST 12345</p>
-              <p>Phone: (555) 123-4567</p>
+              <p>Batian building<br />Nyeri Town</p>
+              <p>Phone:0743905708</p>
               <p>Email: dexrepairs@gmail.com</p>
             </address>
           </div>

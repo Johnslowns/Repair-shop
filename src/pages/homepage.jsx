@@ -20,7 +20,6 @@ export default function Home(){
         <Testimonials />
         <CTA />
         <FAQ />
-        <Map />
       </main>
 
 
