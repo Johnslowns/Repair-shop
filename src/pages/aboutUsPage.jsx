@@ -7,7 +7,7 @@ const AboutUs = () => {
     {
       id: 1,
       name: 'John Theuri',
-      role: 'Founder & Lead Engineer',
+      role: 'Lead Engineer',
       bio: 'With 7+ years in appliance repair, John ensures every repair meets our high standards.',
       image: '/images/john-profile.jpeg'
     },
