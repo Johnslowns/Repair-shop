@@ -13,7 +13,7 @@ const AboutUs = () => {
     },
     {
       id: 2,
-      name: 'Martha Wanjiru',
+      name: 'Regina Wanjiru',
       role: 'Customer Service Manager',
       bio: 'Yvonne makes sure every customer gets the best service experience possible.',
       image: 'team-member2.jpg'
