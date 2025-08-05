@@ -6,10 +6,15 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="dex-navbar">
       <div className="dex-navbar-container">
         <div className="dex-navbar-logo">
+          {/* Using a placeholder for the logo image. Ensure your actual image path is correct. */}
           <img src="./images/logo_image.PNG" alt="Dex Logo" />
         </div>
 
@@ -22,11 +27,16 @@ const Navbar = () => {
           <span className="bar"></span>
         </div>
 
+        {/* Mobile Overlay: Appears when the menu is open to close it on outside click */}
+        {menuOpen && (
+          <div className="dex-overlay" onClick={closeMenu}></div>
+        )}
+
         <div className={`dex-navbar-links ${menuOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/aboutUs" onClick={() => setMenuOpen(false)}>About Us</Link>
-          <Link to="/contactUs" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/services" onClick={closeMenu}>Services</Link>
+          <Link to="/aboutUs" onClick={closeMenu}>About Us</Link>
+          <Link to="/contactUs" onClick={closeMenu}>Contact Us</Link>
         </div>
       </div>
     </nav>

@@ -1614,6 +1614,12 @@ cite {
   }
 }
 
+/* Global styles for body to prevent overflow */
+/* This is crucial to prevent horizontal scrolling when the menu is off-screen */
+body {
+  overflow-x: hidden;
+}
+
 .dex-navbar {
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -1630,7 +1636,7 @@ cite {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: relative; /* Needed for logo/toggle positioning if they were absolute, but generally good practice */
 }
 
 /* Logo */
@@ -1657,12 +1663,12 @@ cite {
   color: #2aa046;
 }
 
-/* Hamburger */
+/* Hamburger Toggle (Desktop: hidden, Mobile: flex) */
 .dex-navbar-toggle {
-  display: none;
+  display: none; /* Hidden by default on desktop */
   flex-direction: column;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1001; /* Ensure it's above the mobile menu and overlay */
 }
 
 .dex-navbar-toggle .bar {
@@ -1672,6 +1678,7 @@ cite {
   margin: 4px 0;
   transition: 0.4s;
 }
+
 /* Transform hamburger into X when open */
 .dex-navbar-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -1685,43 +1692,57 @@ cite {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 768px) {
-  .dex-navbar-logo img {
-    height: 35px;
-  }
+/* Mobile Overlay Styles */
+.dex-overlay {
+  position: fixed; /* Covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 999; /* Ensures it's behind the menu but above other content */
 }
 
-/* Mobile Menu */
+/* Mobile Menu Specific Styles */
 @media (max-width: 768px) {
   .dex-navbar-toggle {
-    display: flex;
+    display: flex; /* Show hamburger on mobile */
   }
 
   .dex-navbar-links {
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 60%;
+    position: fixed; /* Position relative to the viewport */
+    top: 0;
+    right: 0; /* Align to the right edge of the viewport */
+    width: 60%; /* The width of the menu when it's open */
+    max-width: 300px; /* Optional: limit max width for larger mobile devices */
+    height: 100vh; /* Full viewport height */
     background-color: white;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    transition: right 0.3s ease-in-out;
-    height: auto;
+    /* This is the key change:
+       Initially hide completely off-screen to the right using transform. */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+    z-index: 1000; /* Ensure it's above other content and the overlay */
+    overflow-y: auto; /* Allow scrolling if menu content is long */
   }
 
   .dex-navbar-links.active {
-    right: 0;
+    /* Slide into view */
+    transform: translateX(0);
   }
 
   .dex-navbar-links a {
     padding: 0.75rem 0;
     width: 100%;
     text-align: right;
+    border-bottom: 1px solid #eee; /* Add subtle separation between links */
+  }
+  .dex-navbar-links a:last-child {
+    border-bottom: none; /* No border for the last item */
   }
 }
-
-
 
 .hero-repair-section {
   display: flex;
